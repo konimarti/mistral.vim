@@ -1,0 +1,89 @@
+*mistral.txt*    A complete Mistral Vibe Dark colorscheme for Vim & Neovim
+
+==============================================================================
+MISTRAL VIBE DARK COLORSCHEME                                        *mistral*
+
+Mistral is a sleek, modern dark colorscheme inspired by Mistral AI's brand
+identity and the official Mistral Vibe CLI developer experience. It features
+deep carbon backgrounds, clean typography hierarchy, and a warm sunset gradient
+accent ramp (yellow -> amber -> orange -> red).
+
+CONTENTS                                                    *mistral-contents*
+
+    1. Requirements ................................ |mistral-requirements|
+    2. Installation ................................ |mistral-installation|
+    3. Configuration ............................... |mistral-configuration|
+    4. Options ..................................... |mistral-options|
+    5. Lightline & Airline ......................... |mistral-statuslines|
+    6. License ..................................... |mistral-license|
+
+==============================================================================
+1. REQUIREMENTS                                         *mistral-requirements*
+
+- Vim 8.0+ or Neovim 0.5+
+- True color terminal support (`set termguicolors`) or a 256-color terminal.
+
+==============================================================================
+2. INSTALLATION                                         *mistral-installation*
+
+Vundle: >
+    Plugin 'konimarti/mistral.vim'
+
+vim-plug: >
+    Plug 'konimarti/mistral.vim'
+
+Manual:
+    Clone into `~/.vim/bundle/mistral.vim` or `pack/*/start/mistral.vim`.
+
+==============================================================================
+3. CONFIGURATION                                       *mistral-configuration*
+
+To activate the colorscheme, add to your `.vimrc` or `init.vim`: >
+    if has('termguicolors')
+      set termguicolors
+    endif
+    colorscheme mistral
+<
+==============================================================================
+4. OPTIONS                                                   *mistral-options*
+
+*g:mistral_style*
+    Default: `'dark'`
+    Choices: `'dark'`, `'soft'`
+    Set to `'soft'` for a slightly lighter dark-zinc background (#18181b).
+
+*g:mistral_transparent_background*
+    Default: `0`
+    Choices: `0`, `1`
+    Disable editor background colors for transparent terminal emulators.
+
+*g:mistral_italic_comments*
+    Default: `1`
+    Set to `0` to disable italics in comments.
+
+*g:mistral_italic_keywords*
+    Default: `0`
+    Set to `1` to enable italics in keywords and conditional statements.
+
+*g:mistral_bold*
+    Default: `1`
+    Set to `0` to disable bold formatting across all syntax elements.
+
+==============================================================================
+5. LIGHTLINE & AIRLINE                                   *mistral-statuslines*
+
+Lightline configuration: >
+    let g:lightline = {
+          \ 'colorscheme': 'mistral',
+          \ }
+<
+vim-airline configuration: >
+    let g:airline_theme = 'mistral'
+<
+==============================================================================
+6. LICENSE                                                   *mistral-license*
+
+MIT License.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:
